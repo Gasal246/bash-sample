@@ -15,12 +15,13 @@ if [ ! -d "$SOURCE_DIR" ]; then
   exit 1
 fi
 
-
+# Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
 
-
+# Perform backup
 tar -czf "$BACKUP_DIR/$FILENAME" -C "$SOURCE_DIR" .
 
+# Check result
 if [ $? -eq 0 ]; then
   echo "Backup successful: $BACKUP_DIR/$FILENAME"
 else
