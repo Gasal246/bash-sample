@@ -15,7 +15,7 @@ echo """
 -
 """
 
-# Get user input for directory and days
+# User input for directory and days
 read -p "Enter Target Dir: " TARGET_DIR
 read -p "How many Days Old: " DAYS
 
@@ -30,7 +30,7 @@ fi
 
 echo "Searching for files in $TARGET_DIR older than $DAYS days..."
 
-# Find files older than the given days
+# Finding files older than the given days
 FILES=$(find "$TARGET_DIR" -type f -mtime +"$DAYS")
 
 # Check if any files were found
